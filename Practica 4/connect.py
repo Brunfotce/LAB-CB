@@ -26,7 +26,6 @@ async def on_ready():
         f'{guild.name}(id: {guild.id})\n'
     )
     members = '\n - '.join([member.name for member in guild.members])
-    print("Si no se termina aqui automaticamente, es porque se buggea el 'event' de la api asi que nomas hay terminarla :'v")
     print(f'Guild Members:\n - {members}')
     
 @client.event
@@ -54,7 +53,7 @@ async def on_message(message):
         response = random.choice(brooklyn_99_quotes)
         await message.channel.send(response)
 
-
+print("El script esta se queda en espera a los 'eventos' es normal, quiere decir que el bot esta esperando a instrucciones")
 client.run(TOKEN)
 
 
